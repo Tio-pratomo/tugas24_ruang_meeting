@@ -1,0 +1,5 @@
+.nama,
+.nomor {
+    display: flex;
+    justify-content: center;
+}

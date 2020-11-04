@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+// * Libraries
+import { BrowserRouter, Route } from 'react-router-dom';
+
+// * Komponen
+import Halaman_Login from './Komponen/Halaman_Login';
+import Halaman_Dashboard from './Komponen/Halaman_Dashboard';
+import Halaman_Pemesanan from './Komponen/Halaman_Pemesanan';
+
+// * Style / Css
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <div id="app" className="Application">
+                <Route exact path="/" component={Halaman_Login} />
+                <Route path="/Dashboard" component={Halaman_Dashboard} />
+                <Route path="/Pemesanan" component={Halaman_Pemesanan} />
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
