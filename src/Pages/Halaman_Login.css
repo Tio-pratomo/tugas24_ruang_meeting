@@ -5,3 +5,7 @@
 .Row_form {
     min-height: 100vh;
 }
+
+Button {
+    width: 7vw;
+}
